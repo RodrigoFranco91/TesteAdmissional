@@ -22,11 +22,11 @@ public class AlunoController {
 	}
 
 	@RequestMapping("cadastroAluno")
-	public ModelAndView cadastroAluno(Aluno aluno) {
-		ModelAndView mv = new ModelAndView("aluno/list-aluno.jsp");
+	public String cadastroAluno(Aluno aluno) {
+		Aluno alunoSalvo = alunoRepository.save(aluno);
+		aluno.setMatricula(alunoSalvo.getId());
 		alunoRepository.save(aluno);
-		mv.addObject("alunos", alunoRepository.findAll());
-		return mv;
+		return "redirect:/listaAlunos";
 	}
 
 	@RequestMapping("listaAlunos")
@@ -53,7 +53,7 @@ public class AlunoController {
 	public String alteraAluno(Aluno aluno) {
 		Aluno oldAluno = alunoRepository.getOne(aluno.getId());
 		oldAluno.setNome(aluno.getNome());
-		oldAluno.setMatricula(aluno.getMatricula());
+		oldAluno.setMatricula(aluno.getId());
 		alunoRepository.save(oldAluno);
 		return "redirect:listaAlunos";
 	}

@@ -12,7 +12,7 @@ public class Aluno{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String nome;
-	private Integer matricula;
+	private Long matricula;
 	
 	public Long getId() {
 		return id;
@@ -26,15 +26,11 @@ public class Aluno{
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public Integer getMatricula() {
+	public Long getMatricula() {
 		return matricula;
 	}
-	public void setMatricula(Integer matricula) {
+	
+	public void setMatricula(Long matricula) {
 		this.matricula = matricula;
 	}
-	
-
-	
-	
-	
 }
