@@ -4,7 +4,7 @@
 <html style="height: 100%; min-height: 100%">
 <head lang="pt-BR">
 <meta charset="UTF-8">
-<title>Projeto Admissional B2ML</title>
+<title>Sobre</title>
 <link rel="stylesheet" href="static/bootstrap/css/bootstrap.min.css">
 </head>
 <body class="bg-light" style="display: flex; flex-direction: column; min-height: 100%">
@@ -37,7 +37,7 @@
 						</div>
 					</li>
 					<li class="nav-item dropdown" style="margin-left: 1em">
-						<a class="nav-link " href="sobre" id="dropdown01" 
+						<a class="nav-link " href="sobre" id="dropdown01" data-toggle="dropdown" 
 						aria-haspopup="true" aria-expanded="false">Sobre</a>
 					</li>
 				</ul>
@@ -47,9 +47,25 @@
 		<section class="jumbotron ">
     		<div class="container">
      			<h1 class="text-center">Projeto Admissional para empresa <a href="https://b2ml.com.br/">B2ml.</a></h1></br>
-      			<p class="lead text-muted">Essa é uma aplicação para Criar e Administrar Turmas de Aula.</p>
-      			<p class="lead text-muted">Com ela é possível: Cadastrar Professores, Cadastrar Alunos, Cadastrar/Criar Turmas de Aula e Alterar/Excluir todos esses cadastros. Para acessar esses serviços basta acessar os links que estão na barra de navegação superior.</p>
-    			<p class="lead text-muted">Clique em <a  href="sobre">sobre</a> para saber mais sobre o app e as tecnologias utilizadas.</p>
+      			<p class="lead text-muted">Esse projeto <a href="https://www.rodrigofrancodelima.com.br">eu</a> 
+      			criei a pedido da empresa <a href="https://b2ml.com.br/">B2ml</a>,
+      			pois uma das etapas do processo seletivo por qual passei era criar um app seguindo os requesitos funcionais e não funcionais indicados pela empresa.</p> 
+      			<p class="lead text-muted">Fui aprovado no processo seletivo, mas infelizmente por problemas pessoais tive que desistir da vaga.</p>
+    		</div>
+  		</section>
+  		<section class="jumbotron ">
+    		<div class="container">
+     			<h1 class="text-center">Tecnologias Utilizadas:</h1></br>
+      			<ul class="list-group list-group-flush">
+				  <li class="list-group-item"><span class="font-weight-bold">Linguagem de Programação:</span> Java.</li>
+				  <li class="list-group-item"><span class="font-weight-bold">Especificações do Java EE:</span> JPA, JSP.</li>
+				  <li class="list-group-item"><span class="font-weight-bold">Linguagens de Marcação e Estilo:</span> HTML5, CSS3.</li>
+				  <li class="list-group-item"><span class="font-weight-bold">Frameworks:</span> Spring (Boot, MVC, Data JPA), Bootstrap.</li>
+				  <li class="list-group-item"><span class="font-weight-bold">Banco de Dados(SGBD):</span> PostgreSQL.</li>
+				  <li class="list-group-item"><span class="font-weight-bold">Controlador de Versão:</span> Git/Github.</li>
+				  <li class="list-group-item"><span class="font-weight-bold">Servidor de Aplicação:</span> TomCat.</li>
+				  <li class="list-group-item"><span class="font-weight-bold">Hospedagem:</span> Heroku.</li>
+				</ul>
     		</div>
   		</section>
 	</main>

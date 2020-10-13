@@ -7,7 +7,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class IndexController {
 
 	@RequestMapping("/")
-	public String formulario() {
+	public String index() {
 		return "index.jsp";
+	}
+	
+	@RequestMapping("sobre")
+	public String sobre() {
+		return "sobre.jsp";
 	}
 }

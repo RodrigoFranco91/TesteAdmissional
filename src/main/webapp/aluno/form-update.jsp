@@ -20,8 +20,14 @@
 				<label for="nome">Nome:</label> 
 				<input type="text" class="form-control" id="nome" name="nome" value="${aluno.nome}"> 
 			</div>
-			<button type="submit" class="btn btn-primary">Alterar</button>
+			<div class="text-right">
+				<button type="submit" class="btn btn-primary">Alterar</button>
+			</div>
 		</form>
+		<div class="text-center"></br>
+			<a class="text-decoration-none" href="listaAlunos">Listar Alunos Cadastrados</a></br>
+			<a class="text-decoration-none" href="/">Voltar para página incial</a>
+		</div>
 	</div>
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

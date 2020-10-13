@@ -15,13 +15,18 @@
 			<p class="lead">Digite o(s) dado(s) do aluno que se deseja cadastrar:</p>
 		</div>
 		<form action="cadastroAluno">
-			<div class="form-group">
+			<div class="form-group ">
 				<label for="nome">Nome:</label> 
 				<input type="text" class="form-control" id="nome" name="nome"> 
 			</div>
-
-			<button type="submit" class="btn btn-primary">Cadastrar</button>
+			<div class="text-right">
+				<button type="submit" class="btn btn-primary">Cadastrar</button>
+			</div>
 		</form>
+		<div class="text-center"></br>
+			<a class="text-decoration-none" href="listaAlunos">Listar Alunos Cadastrados</a></br>
+			<a class="text-decoration-none" href="/">Voltar para página incial</a>
+		</div>
 	</div>
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

@@ -22,11 +22,9 @@ public class ProfessorController {
 	}
 
 	@RequestMapping("cadastroProfessor")
-	public ModelAndView cadastroProfessor(Professor professor) {
-		ModelAndView mv = new ModelAndView("professor/list-professor.jsp");
+	public String cadastroProfessor(Professor professor) {
 		professorRepository.save(professor);
-		mv.addObject("professores", professorRepository.findAll());
-		return mv;
+		return "redirect:listaProfessores";
 	}
 
 	@RequestMapping("listaProfessores")
