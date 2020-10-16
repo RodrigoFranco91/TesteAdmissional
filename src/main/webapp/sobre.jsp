@@ -9,7 +9,7 @@
 </head>
 <body class="bg-light" style="display: flex; flex-direction: column; min-height: 100%">
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-			<a class="navbar-brand mr-auto mr-lg-0" href="/">Projeto Admissional da Empresa B2ml</a>
+			<a class="navbar-brand mr-auto mr-lg-0" href="/">Sobre - Projeto Admissional</a>
 			<div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
 				<ul class="navbar-nav mr-auto" style="margin-left: 3em">
 					<li class="nav-item dropdown" style="margin-left: 1em">
@@ -18,6 +18,7 @@
 						<div class="dropdown-menu" aria-labelledby="dropdown01">
 							<a class="dropdown-item" href="professor">Cadastro de Professor</a> 
 							<a class="dropdown-item" href="aluno">Cadastro de Aluno</a> 
+							<a class="dropdown-item" href="turma">Cadastro de Turma</a> 
 						</div>
 					</li>
 					<li class="nav-item dropdown" style="margin-left: 1em">
@@ -26,6 +27,7 @@
 						<div class="dropdown-menu" aria-labelledby="dropdown01">
 							<a class="dropdown-item" href="listaProfessores">Lista de Professores</a> 
 							<a class="dropdown-item" href="listaAlunos">Lista de Alunos</a> 
+							<a class="dropdown-item" href="listaTurma">Lista de Turma</a> 
 						</div>
 					</li>
 					<li class="nav-item dropdown" style="margin-left: 1em">
@@ -34,10 +36,11 @@
 						<div class="dropdown-menu" aria-labelledby="dropdown01">
 							<a class="dropdown-item" href="listaProfessores">Alterar/Excluir Professores</a> 
 							<a class="dropdown-item" href="listaAlunos">Alterar/Excluir Alunos</a> 
+							<a class="dropdown-item" href="listaTurma">Alterar/Excluir Turma</a> 
 						</div>
 					</li>
 					<li class="nav-item dropdown" style="margin-left: 1em">
-						<a class="nav-link " href="sobre" id="dropdown01" data-toggle="dropdown" 
+						<a class="nav-link " href="sobre" id="dropdown01" 
 						aria-haspopup="true" aria-expanded="false">Sobre</a>
 					</li>
 				</ul>
@@ -46,11 +49,11 @@
 	<main>
 		<section class="jumbotron ">
     		<div class="container">
-     			<h1 class="text-center">Projeto Admissional para empresa <a href="https://b2ml.com.br/">B2ml.</a></h1></br>
+     			<h1 class="text-center">Saiba mais sobre o Projeto Admissional</h1></br>
       			<p class="lead text-muted">Esse projeto <a href="https://www.rodrigofrancodelima.com.br">eu</a> 
-      			criei a pedido da empresa <a href="https://b2ml.com.br/">B2ml</a>,
-      			pois uma das etapas do processo seletivo por qual passei era criar um app seguindo os requesitos funcionais e não funcionais indicados pela empresa.</p> 
-      			<p class="lead text-muted">Fui aprovado no processo seletivo, mas infelizmente por problemas pessoais tive que desistir da vaga.</p>
+      			criei a pedido de uma empresa localizada na cidade de Itajuba - MG, pois uma das etapas do processo seletivo era criar um app seguindo 
+      			os requesitos funcionais e não funcionais passados por eles. </p> 
+      			<p class="lead text-muted">Fui aprovado nesse processo seletivo, mas infelizmente por problemas pessoais tive que desistir da vaga.</p>
     		</div>
   		</section>
   		<section class="jumbotron ">

@@ -19,7 +19,15 @@
 				<label for="nome">Nome:</label> 
 				<input type="text" class="form-control" id="nome" name="nome"> </br>
 			    <label for="titulacao">Titulação:</label> 
-				<input type="text" class="form-control" id="titulacao" name="titulacao"> 
+				<select class="form-control" id="titulacao" name="titulacao">
+					  <option hidden disabled selected value> -- Selecione uma opção -- </option>
+				      <option value="Técnico">Técnico</option>
+				      <option value="Bacharel">Bacharel</option>
+				      <option value="Licenciado">Licenciado</option>
+				      <option value="Especialista">Especialista</option>
+				      <option value="Mestre">Mestre</option>
+				      <option value="Doutor">Doutor</option>
+   				</select>
 			</div>
 			<div class="text-right">
 				<button type="submit" class="btn btn-primary">Cadastrar</button>

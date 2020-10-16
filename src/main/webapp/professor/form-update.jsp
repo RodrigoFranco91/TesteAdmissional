@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html style="height: 100%; min-height: 100%">
 <head lang="pt-BR">
@@ -20,7 +21,15 @@
 				<label for="nome">Nome:</label> 
 				<input type="text" class="form-control" id="nome" name="nome" value="${professor.nome}"> </br>
 				<label for="titulacao">Titulação:</label> 
-				<input type="text" class="form-control" id="titulacao" name="titulacao" value="${professor.titulacao}"> 
+				<select class="form-control" id="titulacao" name="titulacao">
+				      <option value="Técnico" ${professor.titulacao eq "Técnico" ? "SELECTED" : ""}>Técnico</option>
+				      <option value="Bacharel" ${professor.titulacao eq "Bacharel" ? "SELECTED" : ""}>Bacharel</option>
+				      <option value="Licenciado" ${professor.titulacao eq "Licenciado" ? "SELECTED" : ""}>Licenciado</option>
+				      <option value="Especialista" ${professor.titulacao eq "Especialista" ? "SELECTED" : ""}>Especialista</option>
+				      <option value="Mestre" ${professor.titulacao eq "Mestre" ? "SELECTED" : ""}>Mestre</option>
+				      <option value="Doutor" ${professor.titulacao eq "Doutor" ? "SELECTED" : ""}>Doutor</option>
+   				</select>
+   				
 			</div>
 			<div class="text-right">
 				<button type="submit" class="btn btn-primary">Alterar</button>
