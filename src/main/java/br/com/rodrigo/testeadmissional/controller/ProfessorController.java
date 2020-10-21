@@ -1,5 +1,7 @@
 package br.com.rodrigo.testeadmissional.controller;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,13 +10,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import br.com.rodrigo.testeadmissional.model.Professor;
+import br.com.rodrigo.testeadmissional.model.Turma;
 import br.com.rodrigo.testeadmissional.repository.ProfessorRepository;
+import br.com.rodrigo.testeadmissional.repository.TurmaRepository;
 
 @Controller
 public class ProfessorController {
 
 	@Autowired
 	private ProfessorRepository professorRepository;
+	
+	@Autowired
+	private TurmaRepository turmaRepository;
 
 	@RequestMapping("professor")
 	public String formulario() {
@@ -36,10 +43,15 @@ public class ProfessorController {
 
 	@RequestMapping("removeProfessor")
 	public String removeProfessor(Professor professor) {
+		try {
 			professorRepository.delete(professor);
 			return "redirect:listaProfessores";
-	}
+		} catch (Exception e) {
+			return "professor/erro.jsp";
+		}
 
+	}
+	
 	@RequestMapping("atualizaProfessor")
 	public ModelAndView formularioUpdate(Professor professor) {
 		ModelAndView mv = new ModelAndView("professor/form-update.jsp");

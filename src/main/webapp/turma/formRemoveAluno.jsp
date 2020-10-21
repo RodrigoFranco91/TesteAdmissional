@@ -6,17 +6,16 @@
 <html style="height: 100%; min-height: 100%">
 <head lang="pt-BR">
 <meta charset="UTF-8">
-<title>Alunos da Turma</title>
+<title>Remover Alunos</title>
 <link rel="stylesheet" href="./static/bootstrap/css/bootstrap.min.css">
 </head>
 <body class="bg-light" style="display: flex; flex-direction: column; min-height: 100%">
 	<div class="container">
 		<div class="py-5 text-center">
-			<h1>Listagem dos Alunos da Turma com id: ${turma.id} e Sala: ${turma.sala}</h1>
+			<h1>Formulário de Turma para Remover Alunos</h1>
 			</br>
 		</div>
-		<h2>Dados da Turma:</h2>
-		<form action="adicionaAluno">
+		<form action="removeAlunoDaTurma">
 			<div class="form-group ">
 				<input class="form-control" type="hidden" name="id" value="${turma.id }" />
 				<label for="sala">Sala:</label> 
@@ -28,16 +27,19 @@
 				<label for="professor" >Professor:</label> 
 				<input type="text" class="form-control" id="professor" name="professor" value="${turma.professor.nome}" disabled="disabled" > </br>
 			</div>
+			<h2>Selecione os Alunos que se deseja remover da Turma:</h2></br>
+			<div  class="row" >
+				    <c:forEach items="${turma.alunos}" var="aluno">
+				    <div class="col-4">
+ 						<input type='checkbox' name='alunos' value='${aluno.id}'}/> ${aluno.nome} </br>
+ 					</div>
+            	</c:forEach>
+			</div>
+			<div class="text-right">
+				<button type="submit" class="btn btn-primary">Remover Alunos</button>
+			</div>
 		</form>
-		<h2>Alunos:</h2></br>
-		<ul class="card-columns">
-			<c:forEach items="${turma.alunos}" var="aluno">
-					<li>${aluno.nome}</li>
-			</c:forEach>
-		</ul>
-		<div class="text-right"></br>
-			<a class="text-decoration-none" href="formAddAluno?id=${turma.id}">Adicionar Alunos</a></br>
-			<a class="text-decoration-none" href="formRemoveAluno?id=${turma.id}">Remover Alunos</a></br>
+		<div class="text-center"></br>
 			<a class="text-decoration-none" href="listaTurma">Listar Turmas Cadastradas</a></br>
 			<a class="text-decoration-none" href="/">Voltar para página incial</a>
 		</div>

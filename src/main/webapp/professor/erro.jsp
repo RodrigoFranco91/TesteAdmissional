@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html style="height: 100%; min-height: 100%">
 <head lang="pt-BR">
@@ -57,10 +58,11 @@
 	<main>
 		<section class="jumbotron ">
     		<div class="container">
-     			<h1 class="text-center">Projeto Admissional</h1></br>
-      			<p class="lead text-muted">Essa é uma aplicação para Criar e Administrar Turmas de Aula.</p>
-      			<p class="lead text-muted">Com ela é possível: Cadastrar Professores, Cadastrar Alunos, Cadastrar/Criar Turmas de Aula e Alterar/Excluir todos esses cadastros. Para acessar esses serviços basta acessar os links que estão na barra de navegação superior.</p>
-    			<p class="lead text-muted">Clique em <a  href="sobre">sobre</a> para saber mais sobre o app e as tecnologias utilizadas.</p>
+     			<div class="alert alert-danger" role="alert">
+  					<h4 class="alert-heading">Atenção! Você está tentando deletar um Professor que está vinculado a uma ou mais turmas!</h4>
+  						<p>Primeiramente você deve alterar a(s) Turma(s) vinculadas a este Professor, para depois deletá-lo.</p>
+  						<hr>
+				</div>
     		</div>
   		</section>
 	</main>

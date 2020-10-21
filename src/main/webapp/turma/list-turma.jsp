@@ -14,7 +14,7 @@
 		<div class="py-5 text-center">
 			<h1>Listagem de Todos as Turmas Cadastradas no Sistema</h1>
 			</br>
-			<p class="lead">Escolha entre as opções de excluir, alterar o cadastro de um aluno:</p>
+			<p class="lead">Escolha entre as opções de excluir, alterar o cadastro de uma Turma:</p>
 		</div>
 		<table class="table table-striped table-dark">
 		 	<thead>

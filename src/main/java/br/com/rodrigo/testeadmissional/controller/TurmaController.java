@@ -52,8 +52,13 @@ public class TurmaController {
 	
 	@RequestMapping("removeTurma")
 	public String listaTurma(Turma turma) {
-		turmaRepository.delete(turma);
-		return "redirect:listaTurma";
+		try {
+			turmaRepository.delete(turma);
+			return "redirect:listaTurma";
+		} catch (Exception e) {
+			return "turma/erro.jsp";
+		}
+
 	}
 	
 	@RequestMapping("atualizaTurma")
@@ -117,5 +122,41 @@ public class TurmaController {
 		ModelAndView mv = new ModelAndView("turma/alunos-da-turma.jsp");
 		mv.addObject("turma", turmaRepository.getOne(turma.getId()));
 		return mv;
+	}
+	
+	@RequestMapping("formRemoveAluno")
+	public ModelAndView formRemoveAluno(Long id) {
+		ModelAndView mv = new ModelAndView("turma/formRemoveAluno.jsp");
+		mv.addObject("turma", turmaRepository.getOne(id));
+		return mv;
+	}
+	
+	@RequestMapping("removeAlunoDaTurma")
+	public String removeAluno(Turma turmaComAlunos) {
+		List<Aluno> alunosAtualizados = new ArrayList<Aluno>();
+		List<Aluno> alunosRemovidos = new ArrayList<Aluno>();
+		Turma oldTurma = turmaRepository.getOne(turmaComAlunos.getId());
+		turmaComAlunos.setId(oldTurma.getId());
+		turmaComAlunos.setDataAbertura(oldTurma.getDataAbertura());
+		turmaComAlunos.setDataEncerramento(oldTurma.getDataEncerramento());
+		turmaComAlunos.setSala(oldTurma.getSala());
+		turmaComAlunos.setProfessor(oldTurma.getProfessor());
+		List<Aluno> alunosAntigos = oldTurma.getAlunos();
+		for (Aluno auxAntigos : alunosAntigos) {
+			for (Aluno auxParaRemover : turmaComAlunos.getAlunos()) {
+				if(auxAntigos.getId() != auxParaRemover.getId()) {
+					alunosAtualizados.add(auxAntigos);
+				}else {
+					alunosRemovidos.add(auxAntigos);
+				}
+			}
+		}
+		turmaComAlunos.setAlunos(alunosAtualizados);
+		for (Aluno aux : alunosRemovidos) {
+			aux.setTurma(null);
+			alunoRepository.save(aux);
+		}
+		turmaRepository.save(turmaComAlunos);
+		return "redirect:listagemTurma";
 	}
 }

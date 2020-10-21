@@ -37,7 +37,7 @@
 						<td  class="text-center">${turma.professor.nome}</td>
 						<td><a href="verAlunos?id=${turma.id}">Ver Alunos</a></td>
 						<td><a href="formAddAluno?id=${turma.id}">Adicionar Alunos</a></td>
-						<td><a href="formAddAluno?id=${turma.id}">Remover Alunos</a></td>
+						<td><a href="formRemoveAluno?id=${turma.id}">Remover Alunos</a></td>
 					</tr>
 				</c:forEach>
 			</tbody>

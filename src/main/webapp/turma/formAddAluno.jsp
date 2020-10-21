@@ -6,13 +6,13 @@
 <html style="height: 100%; min-height: 100%">
 <head lang="pt-BR">
 <meta charset="UTF-8">
-<title>Adicionar/Remover Alunos</title>
+<title>Adicionar Alunos</title>
 <link rel="stylesheet" href="./static/bootstrap/css/bootstrap.min.css">
 </head>
 <body class="bg-light" style="display: flex; flex-direction: column; min-height: 100%">
 	<div class="container">
 		<div class="py-5 text-center">
-			<h1>Formulário de Turma para Adicionar e/ou remover Alunos</h1>
+			<h1>Formulário de Turma para Adicionar Alunos</h1>
 			</br>
 		</div>
 		<form action="adicionaAluno">
