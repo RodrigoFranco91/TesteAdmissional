@@ -29,8 +29,8 @@
 					<tr>
 						<td>${aluno.nome}</td>
 						<td class="text-center">${aluno.matricula}</td>
-						<td><a href="removeAluno?id=${aluno.id}">Deletar</a></td>
 						<td><a href="atualizaAluno?id=${aluno.id}">Alterar</a></td>
+						<td><a href="removeAluno?id=${aluno.id}">Deletar</a></td>
 					</tr>
 				</c:forEach>
 			</tbody>

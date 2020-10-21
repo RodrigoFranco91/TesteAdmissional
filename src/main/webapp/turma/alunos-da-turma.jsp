@@ -6,37 +6,38 @@
 <html style="height: 100%; min-height: 100%">
 <head lang="pt-BR">
 <meta charset="UTF-8">
-<title>Atualizando Turma</title>
+<title>Alunos da Turma</title>
 <link rel="stylesheet" href="./static/bootstrap/css/bootstrap.min.css">
 </head>
 <body class="bg-light" style="display: flex; flex-direction: column; min-height: 100%">
 	<div class="container">
 		<div class="py-5 text-center">
-			<h1>Alterando Cadastro de Turma</h1>
+			<h1>Listagem dos Alunos da Turma com id: ${turma.id} e Sala: ${turma.sala}</h1>
 			</br>
-			<p class="lead">Atualize o(s) dado(s) da Turma de Id: ${turma.id} - Sala: ${turma.sala}</p>
 		</div>
-		<form action="alteraTurma">
+		<h2>Dados da Turma:</h2>
+		<form action="adicionaAluno">
 			<div class="form-group ">
 				<input class="form-control" type="hidden" name="id" value="${turma.id }" />
 				<label for="sala">Sala:</label> 
-				<input type="text" class="form-control" id="sala" name="sala" value="${turma.sala}"> </br>
+				<input type="text" class="form-control" id="sala" name="sala" value="${turma.sala}" disabled="disabled"> </br>
 				<label for="dataAbertura">Data de Abertura:</label> 
-				<input type="date" class="form-control" id="dataAbertura" name="dataAbertura" value="${turma.dataAbertura}"> </br>
+				<input type="date" class="form-control" id="dataAbertura" name="dataAbertura" value="${turma.dataAbertura}" disabled="disabled"> </br>
 				<label for="dataEncerramento">Data de Encerramento:</label> 
-				<input type="date" class="form-control" id="dataEncerramento" name="dataEncerramento" value="${turma.dataEncerramento}" > </br>
-				<label >Professor:</label> 
-           		<select name="professor.id">
-                	<c:forEach items="${professores}" var="professor">
-                    	<option value="${professor.id}" ${turma.professor.nome eq professor.nome ? "SELECTED" : ""}>${professor.nome}</option>
-                	</c:forEach>
-            </select>
-			</div>
-			<div class="text-right">
-				<button type="submit" class="btn btn-primary">Alterar</button>
+				<input type="date" class="form-control" id="dataEncerramento" name="dataEncerramento" value="${turma.dataEncerramento}" disabled="disabled" > </br>
+				<label for="professor" >Professor:</label> 
+				<input type="text" class="form-control" id="professor" name="professor" value="${turma.professor.nome}" disabled="disabled" > </br>
 			</div>
 		</form>
-		<div class="text-center"></br>
+		<h2>Alunos:</h2></br>
+		<ul class="card-columns">
+			<c:forEach items="${turma.alunos}" var="aluno">
+					<li>${aluno.nome}</li>
+			</c:forEach>
+		</ul>
+		<div class="text-right"></br>
+			<a class="text-decoration-none" href="formAddAluno?id=${turma.id}">Adicionar Alunos</a></br>
+			<a class="text-decoration-none" href="listaTurma">Remover Alunos</a></br>
 			<a class="text-decoration-none" href="listaTurma">Listar Turmas Cadastradas</a></br>
 			<a class="text-decoration-none" href="/">Voltar para página incial</a>
 		</div>

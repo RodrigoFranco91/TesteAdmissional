@@ -36,8 +36,8 @@ public class ProfessorController {
 
 	@RequestMapping("removeProfessor")
 	public String removeProfessor(Professor professor) {
-		professorRepository.delete(professor);
-		return "redirect:listaProfessores";
+			professorRepository.delete(professor);
+			return "redirect:listaProfessores";
 	}
 
 	@RequestMapping("atualizaProfessor")

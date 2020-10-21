@@ -40,6 +40,14 @@
 						</div>
 					</li>
 					<li class="nav-item dropdown" style="margin-left: 1em">
+						<a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" 
+						aria-haspopup="true" aria-expanded="false">Adicionar/Remover Alunos em Turmas</a>
+						<div class="dropdown-menu" aria-labelledby="dropdown01">
+							<a class="dropdown-item" href="listagemTurma">Adicionar Alunos</a> 
+							<a class="dropdown-item" href="listagemTurma">Remover Alunos</a> 
+						</div>
+					</li>
+					<li class="nav-item dropdown" style="margin-left: 1em">
 						<a class="nav-link " href="sobre" id="dropdown01" 
 						aria-haspopup="true" aria-expanded="false">Sobre</a>
 					</li>

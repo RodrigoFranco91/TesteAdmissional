@@ -29,8 +29,8 @@
 					<tr>
 						<td>${professor.nome}</td>
 						<td>${professor.titulacao}</td>
-						<td><a href="removeProfessor?id=${professor.id}">Deletar</a></td>
 						<td><a href="atualizaProfessor?id=${professor.id}">Alterar</a></td>
+						<td><a href="removeProfessor?id=${professor.id}">Deletar</a></td>
 					</tr>
 				</c:forEach>
 			</tbody>

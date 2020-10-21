@@ -1,9 +1,16 @@
 package br.com.rodrigo.testeadmissional.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+
 
 @Entity
 public class Aluno{
@@ -13,7 +20,15 @@ public class Aluno{
 	private Long id;
 	private String nome;
 	private Long matricula;
-	
+	@ManyToOne(cascade = CascadeType.ALL)
+	private Turma turma;
+		
+	public Turma getTurma() {
+		return turma;
+	}
+	public void setTurma(Turma turma) {
+		this.turma = turma;
+	}
 	public Long getId() {
 		return id;
 	}

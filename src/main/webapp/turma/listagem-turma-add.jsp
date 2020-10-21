@@ -14,7 +14,7 @@
 		<div class="py-5 text-center">
 			<h1>Listagem de Todos as Turmas Cadastradas no Sistema</h1>
 			</br>
-			<p class="lead">Escolha entre as opções de excluir, alterar o cadastro de um aluno:</p>
+			<p class="lead">Escolha a Turma que se deseja Adicionar e/ou remover Alunos:</p>
 		</div>
 		<table class="table table-striped table-dark">
 		 	<thead>
@@ -25,7 +25,7 @@
 					<th scope="col"  class="text-center">Professor</th>
 					<th></th>
 					<th></th>
-					<th></th>
+				    <th></th>
 				</tr> 
 			</thead>
 			<tbody>
@@ -36,15 +36,14 @@
 						<td  class="text-center"><fmt:formatDate value="${turma.dataEncerramento}" pattern="dd/MM/yyyy"/></td>
 						<td  class="text-center">${turma.professor.nome}</td>
 						<td><a href="verAlunos?id=${turma.id}">Ver Alunos</a></td>
-						<td><a href="atualizaTurma?id=${turma.id}">Alterar</a></td>
-						<td><a href="removeTurma?id=${turma.id}">Deletar</a></td>
+						<td><a href="formAddAluno?id=${turma.id}">Adicionar Alunos</a></td>
+						<td><a href="formAddAluno?id=${turma.id}">Remover Alunos</a></td>
 					</tr>
 				</c:forEach>
 			</tbody>
 		</table>
 		<div class="text-right">
 			<a class="text-decoration-none" href="turma">Cadastrar nova turma</a></br>
-			<a class="text-decoration-none" href="listagemTurma">Adicionar Alunos em Turma</a></br>
 			<a class="text-decoration-none" href="/">Voltar para página incial</a>
 		</div>
 		</br>
