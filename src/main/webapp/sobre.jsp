@@ -62,7 +62,8 @@
       			criei a pedido de uma empresa localizada na cidade de Itajuba - MG, pois uma das etapas do processo seletivo era criar um app seguindo 
       			os requesitos funcionais e não funcionais passados por eles. </p> 
       			<p class="lead text-muted">Fui aprovado nesse processo seletivo, mas infelizmente por problemas pessoais tive que desistir da vaga.</p>
-    		</div>
+    			<p class="lead text-muted">Link do repositório deste projeto: <a href="https://github.com/RodrigoFranco91/TesteAdmissional">Código</a></p>
+       		</div>
   		</section>
   		<section class="jumbotron ">
     		<div class="container">
